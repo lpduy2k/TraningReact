@@ -62,7 +62,7 @@ export default class RenderWithMap extends Component {
                     {/* {this.renderProduct()} */}
                     {this.renderProductWithMap()}
                 </div>
-                <table className="table">
+                {/* <table className="table">
                     <thead>
                         <tr>
                             <th>id</th>
@@ -73,7 +73,7 @@ export default class RenderWithMap extends Component {
                     <tbody>
                         {this.renderTable()}
                     </tbody>
-                </table>
+                </table> */}
             </div>
         )
     }
