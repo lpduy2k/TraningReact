@@ -13,6 +13,7 @@ import BaiTapStateMap from './BaiTapStateMap/BaiTapStateMap';
 import BaiTapRenderListMovie from './RenderWithMap/BaiTapRenderListMovie';
 import DemoProps from './Props/DemoProps';
 import ListProductRCC from './Props/ListProductRCC';
+ import PropsWithEvent2 from './Props/PropsWithEvent2';
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
       {/* <BaiTapStateMap /> */}
       {/* <BaiTapRenderListMovie /> */}
       {/* <DemoProps /> */}
-      <ListProductRCC />
+      {/* <ListProductRCC /> */}
+      <PropsWithEvent2 />
     </div>
   );
 }
