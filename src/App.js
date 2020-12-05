@@ -14,6 +14,7 @@ import BaiTapRenderListMovie from './RenderWithMap/BaiTapRenderListMovie';
 import DemoProps from './Props/DemoProps';
 import ListProductRCC from './Props/ListProductRCC';
  import PropsWithEvent2 from './Props/PropsWithEvent2';
+import BaiTapGioHangRedux from './BaiTapRedux/BaiTapGioHangRedux/BaiTapGioHangRedux';
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
       {/* <BaiTapRenderListMovie /> */}
       {/* <DemoProps /> */}
       {/* <ListProductRCC /> */}
-      <PropsWithEvent2 />
+      {/* <PropsWithEvent2 /> */}
+      <BaiTapGioHangRedux />
     </div>
   );
 }

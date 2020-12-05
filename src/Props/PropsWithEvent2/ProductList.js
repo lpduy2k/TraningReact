@@ -6,13 +6,7 @@ import Product from './Product';
 export class ProductList extends Component {
     state = {
       productDetail: productList[0],
-      cart: [
-        {"maSP": 1,
-        "tenSP": "VinSmart Live",
-        "donGia": 5700000,
-        "hinhAnh": "./img/vsphone.jpg",
-        "soLuong": 1},
-      ]
+      cart: []
     };
     renderProductListHandler = () => {
         return productList.map((product, index) => {
@@ -39,11 +33,41 @@ export class ProductList extends Component {
         });
       }
     }
+    // dinh nghia su kien xoa gio hang tai noi chua state gio hang
+    deleteItem = (maSPClick) => {
+      // tạo ra 1 giỏ hàng mới giống giá trị giỏ hàng cũ
+      let gioHangCapNhat = [...this.state.cart];
+      // xử lí xóa trên giỏ hàng mới
+      let index = gioHangCapNhat.findIndex(spGH => spGH.maSP === maSPClick);
+      if(index !== -1){
+        gioHangCapNhat.splice(index, 1);
+      }
+      // gán lại giỏ hàng cũ bằng giỏ hàng mới
+      this.setState({
+        cart:gioHangCapNhat
+      });
+    }
+    // Định nghĩa hàm thay đổi số lượng tại nơi chứa state số lượng
+    tangGiamSoLuong = (maSPClick, soLuong) => {
+      let gioHangCapNhat = [...this.state.cart];
+      // tìm trong giỏ hàng có sản phẩm mã == vs sản phẩm được click + or -
+      let spGioHang = gioHangCapNhat.find(spGH => spGH.maSP === maSPClick);
+      // TÌm thấy sp trong giỏ hàng
+      if(spGioHang && spGioHang.soLuong > 1){
+        spGioHang.soLuong += soLuong;
+      }
+      // cập nhật lại giỏ hàng
+      this.setState({
+        cart:gioHangCapNhat
+      });
+
+    }
+    
     render() {
         const {productDetail, cart} = this.state;
         return (
           <>
-          <Modal cart={cart}/>
+          <Modal cart={cart} deleteItem={this.deleteItem} tangGiamSoLuong={this.tangGiamSoLuong}/>
             <div>
                 <div className="row my-5">
                   {this.renderProductListHandler()}
