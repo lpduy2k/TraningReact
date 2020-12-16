@@ -9,7 +9,6 @@ import HandleEvent from './HandleEvent/HandleEvent';
 import DemoState from './DemoState/DemoState';
 import BaiTapChonXe from './BaiTapChonXe/BaiTapChonXe';
 import RenderWithMap from './RenderWithMap/RenderWithMap';
-import BaiTapStateMap from './BaiTapStateMap/BaiTapStateMap';
 import BaiTapRenderListMovie from './RenderWithMap/BaiTapRenderListMovie';
 import DemoProps from './Props/DemoProps';
 import ListProductRCC from './Props/ListProductRCC';
@@ -17,6 +16,7 @@ import ListProductRCC from './Props/ListProductRCC';
 import BaiTapGioHangRedux from './BaiTapRedux/BaiTapGioHangRedux/BaiTapGioHangRedux';
 import BaiTapGameXucXac from './BaiTapRedux/BaiTapGameXucXac/BaiTapGameXucXac';
 import BaiTapQuanLySinhVien from './Form/BaiTapQuanLySinhVien';
+import ReactLifeCycle from './ReactLifeCycle/ReactLifeCycle';
 
 function App() {
   return (
@@ -28,7 +28,6 @@ function App() {
       {/* <DemoState /> */}
       {/* <BaiTapChonXe /> */}
       {/* <RenderWithMap /> */}
-      {/* <BaiTapStateMap /> */}
       {/* <BaiTapRenderListMovie /> */}
       {/* <DemoProps /> */}
       {/* <ListProductRCC /> */}
@@ -36,6 +35,7 @@ function App() {
       {/* <BaiTapGioHangRedux /> */}
       {/* <BaiTapGameXucXac /> */}
       <BaiTapQuanLySinhVien />
+      {/* <ReactLifeCycle /> */}
     </div>
   );
 }
